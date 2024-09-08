@@ -1,0 +1,35 @@
+:root {
+    --black:       #808080;
+    --black-dark:  #000000;
+
+    --red:         #ff0000;
+    --red-dark:    #800000;
+
+    --green:       #00ff00;
+    --green-dark:  #008000;
+
+    --yellow:      #ffff00;
+    --yellow-dark: #808000;
+
+    --blue:        #0000ff;
+    --blue-dark:   #000080;
+
+    --purple:      #ff00ff;
+    --purple-dark: #800080;
+
+    --cyan:        #00ffff;
+    --cyan-dark:   #008080;
+
+    --white:       #ffffff;
+    --white-dark:  #a0a0a4;
+}
+
+body {
+    padding: 50px;
+    background: var(--cyan-dark);
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: var(--blue-dark);
+}
