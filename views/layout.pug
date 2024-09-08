@@ -3,5 +3,11 @@ html
     head
         title= title
         link(rel='stylesheet', href='/stylesheets/style.css')
+
+        script(src="/scripts/jquery.min.js")
+        script(src="/scripts/jquery-ui.min.js")
+        script(src="/scripts/core/popup.js")
+        script(src="/scripts/apps/indev.js")
     body
-        block content
+        main
+            block content

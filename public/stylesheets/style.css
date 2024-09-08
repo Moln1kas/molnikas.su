@@ -33,3 +33,56 @@ body {
 a {
     color: var(--blue-dark);
 }
+
+button {
+    background: var(--white-dark);
+
+    border-left   : 2px solid var(--white);
+    border-top    : 2px solid var(--white);
+    border-right  : 2px solid var(--black-dark);
+    border-bottom : 2px solid var(--black-dark);
+}
+
+button:hover {
+    background: var(--white);
+}
+
+button:active {
+    border-left   : 2px solid var(--black-dark);
+    border-top    : 2px solid var(--black-dark);
+    border-right  : 2px solid var(--white);
+    border-bottom : 2px solid var(--white);
+}
+
+.popup {
+    position: fixed;
+    background: var(--white-dark);
+    
+    border-left   : 2px solid var(--white);
+    border-top    : 2px solid var(--white);
+    border-right  : 2px solid var(--black-dark);
+    border-bottom : 2px solid var(--black-dark);
+}
+
+.popup__header {
+    background: var(--blue-dark);
+    color: var(--white);
+    padding: 4px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.popup__title {
+    width: 100%;
+}
+
+.popup__actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.popup__content {
+    padding: 6px;
+}
