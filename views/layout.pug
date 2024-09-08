@@ -1,13 +1,14 @@
 doctype html
-html
+html(lang="ru")
     head
-        title= title
-        link(rel='stylesheet', href='/stylesheets/style.css')
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(href="/stylesheets/style.css" rel="stylesheet")
+        title title
 
         script(src="/scripts/jquery.min.js")
         script(src="/scripts/jquery-ui.min.js")
         script(src="/scripts/core/popup.js")
         script(src="/scripts/apps/indev.js")
     body
-        main
-            block content
+        block content
