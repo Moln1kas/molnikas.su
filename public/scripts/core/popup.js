@@ -11,7 +11,7 @@ class Popup {
                 <header class="popup__header">
                     <div class="popup__title" id="${id}__title"></div>
                     <div class="popup__actions">
-                        <button id="${id}__popup__close">x</button>
+                        <button class="popup__button" id="${id}__popup__close">x</button>
                     </div>
                 </header>
                 <div class="popup__content" id="${id}__content"></div>

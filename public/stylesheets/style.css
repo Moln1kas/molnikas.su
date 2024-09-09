@@ -35,16 +35,21 @@ a {
 }
 
 button {
+    margin: 8px 0;
+    padding: 6px;
     background: var(--white-dark);
 
     border-left   : 2px solid var(--white);
     border-top    : 2px solid var(--white);
     border-right  : 2px solid var(--black-dark);
     border-bottom : 2px solid var(--black-dark);
+
+    cursor: pointer;
 }
 
 button:hover {
-    background: var(--white);
+    background: var(--black);
+    outline: 2px solid var(--black-dark);
 }
 
 button:active {
@@ -52,6 +57,42 @@ button:active {
     border-top    : 2px solid var(--black-dark);
     border-right  : 2px solid var(--white);
     border-bottom : 2px solid var(--white);
+}
+
+select,
+input[type="text"] {
+    width: 100%;
+    background: var(--white);
+
+    box-sizing: border-box;
+
+    border-left   : 2px solid var(--black-dark);
+    border-top    : 2px solid var(--black-dark);
+    border-right  : 2px solid var(--white);
+    border-bottom : 2px solid var(--white);
+}
+
+select {
+    cursor: pointer;
+}
+
+input[type="text"],
+option {
+    padding: 3px;
+}
+
+option:checked {
+    color: var(--white);
+    background: var(--blue-dark);
+}
+
+input[type="text"]:enabled {
+    outline: none;
+}
+
+input[disabled] {
+    background: var(--black);
+    cursor: not-allowed;
 }
 
 .popup {
@@ -81,6 +122,11 @@ button:active {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+}
+
+.popup__button {
+    margin: 0;
+    padding: 0 6px;
 }
 
 .popup__content {
