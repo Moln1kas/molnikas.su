@@ -1,34 +1,36 @@
 class Popup {
-    constructor(name) { 
-        this.name = name;
-
+    constructor() { 
         this.screenWidth  = $(window).width();
         this.screenHeight = $(window).height();
-
-        this.markup =
-        `
-            <div class="popup" id="${name}__popup">
-                <header class="popup__header">
-                    <div class="popup__title" id="${name}__title"></div>
-                    <div class="popup__actions">
-                        <button id="${name}__popup__close">x</button>
-                    </div>
-                </header>
-                <div class="popup__content" id="${name}__content"></div>
-            <div>
-        `;
     }
 
-    init() {
-        $("body").append(this.markup);
-        
-        $(".popup").css('left', this.screenWidth  /2 - $(".popup").width()  /2);
-        $(".popup").css('top',  this.screenHeight /2 - $(".popup").height() /2);
+    init(id, width, height) {
+        this.markup =
+        `
+            <div class="popup" id="${id}__popup">
+                <header class="popup__header">
+                    <div class="popup__title" id="${id}__title"></div>
+                    <div class="popup__actions">
+                        <button id="${id}__popup__close">x</button>
+                    </div>
+                </header>
+                <div class="popup__content" id="${id}__content"></div>
+            <div>
+        `;
 
-        $(".popup").draggable();
+        $("body").append(this.markup);
+
+        this.popup = $(`#${id}__popup`);
+
+        this.popup.css("width" , width );
+        this.popup.css("height", height);
+        this.popup.css("left", this.screenWidth  /2 - $(`#${id}__popup`).width()  /2);
+        this.popup.css("top",  this.screenHeight /2 - $(`#${id}__popup`).height() /2);
+
+        this.popup.draggable();
     }
 
     popupClose(id) {
-        $(`.${id}`).remove()
+        $(`#${id}__popup`).remove()
     }
 }
