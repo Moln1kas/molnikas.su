@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
+var mixdevRouter = require('./routes/mixdev');
+var moln1kasRouter = require('./routes/moln1kas');
 
 var app = express();
 
@@ -18,6 +20,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/mixdev', mixdevRouter);
+app.use('/moln1kas', moln1kasRouter);
 
 app.use(function(req, res, next) {
     next(createError(404));
