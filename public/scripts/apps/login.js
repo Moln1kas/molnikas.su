@@ -30,6 +30,7 @@ class LoginApp {
                         window.open("/mixdev", "_self");
                     break;
                 }
+                $(".blur__screen").fadeOut(1500)
             });
         });
     }

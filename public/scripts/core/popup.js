@@ -24,6 +24,7 @@ class Popup {
 
         this.popup.css("width" , width );
         this.popup.css("height", height);
+        
         if(!position) {
             this.popup.css("left", this.screenWidth  /2 - $(`#${id}__popup`).width()  /2);
             this.popup.css("top",  this.screenHeight /2 - $(`#${id}__popup`).height() /2);
@@ -34,7 +35,7 @@ class Popup {
             this.popup.css("left", position[0]);
             this.popup.css("top",  position[1]);
         }
-
+        
         this.popup.draggable();
     }
 
